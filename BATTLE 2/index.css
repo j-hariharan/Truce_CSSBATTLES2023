@@ -1,0 +1,127 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    font-family: sans-serif;
+    overflow: hidden;
+    background: linear-gradient(to right, hsl(190, 78%, 36%) 30%, hsl(214, 94%, 27%));
+}
+
+/* logo */
+
+img {
+    display: block;
+    width: 200px;
+    margin: 0px auto;
+}
+
+
+/* main content */
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;
+    flex-grow: 1;
+}
+
+
+
+/* middle content */
+.center {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.center .heading h1 {
+    text-align: center;
+    font-size: 65px;
+    margin: 40px 0px;
+    font-family: cursive;
+}
+
+.center .sports {
+    flex-grow: 1;
+    position: relative;
+
+    --base: 100px;
+    --gap: 20px;
+    --width: 20px;
+}
+
+.center .sports .circle {
+    clip-path: circle(var(--radius) at 50% 150%);
+    width: calc(2 * var(--radius));
+    height: calc(var(--radius));
+
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+
+    background-color: white;
+    --radius: calc(var(--base) + var(--gap-number) * var(--gap) + var(--width-number) * var(--width));
+}
+
+.center .sports .circle#one {
+    --gap-number: 4;
+    --width-number: 5;
+    background-color: #D9117E;
+}
+
+.center .sports .circle#two {
+    --gap-number: 4;
+    --width-number: 4;
+}
+
+.center .sports .circle#three {
+    --gap-number: 3;
+    --width-number: 4;
+    background-color: #B224B9;
+}
+
+.center .sports .circle#four {
+    --gap-number: 3;
+    --width-number: 3;
+}
+
+.center .sports .circle#five {
+    --gap-number: 2;
+    --width-number: 3;
+    background-color: #8E34C6;
+}
+
+.center .sports .circle#six {
+    --gap-number: 2;
+    --width-number: 2;
+}
+
+.center .sports .circle#seven {
+    --gap-number: 1;
+    --width-number: 2;
+    background-color: #8E34C6;
+}
+
+.center .sports .circle#eight {
+    --gap-number: 1;
+    --width-number: 1;
+}
+
+.center .sports .circle#nine {
+    --gap-number: 0;
+    --width-number: 1;
+    background-color: #1949E8;
+}
+
+.center .sports .circle#ten {
+    --gap-number: 0;
+    --width-number: 0;
+}

@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asian Games</title>
+
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+<body>
+    <div class="content">
+        <div class="left">
+            <div class="vertical-text">
+                <style>
+                    .vertical-text {
+                    background-image: linear-gradient(red, yellow);
+                    writing-mode: vertical-lr;
+                    text-orientation: upright;
+                    font-size: 250%;
+                    height: 100vh;
+                    padding: 10px 20px;
+                }
+         
+                @supports(text-orientation:upright){
+                    .vertical-text{
+                        background-color: greenyellow;
+                    }
+                }
+                </style>
+                <span><strong>EVER ONWARD</strong></span>
+            </div>
+        </div>
+        <div class="center">
+            <img src="sun.png" alt="Asian Games">
+            <div class="heading">
+                <h1>ASIAN GAMES</h1>
+            </div>
+            <div class="sports">
+                <div class="circle" id="one"></div>
+                <div class="circle" id="two"></div>
+                <div class="circle" id="three"></div>
+                <div class="circle" id="four"></div>
+                <div class="circle" id="five"></div>
+                <div class="circle" id="six"></div>
+                <div class="circle" id="seven"></div>
+                <div class="circle" id="eight"></div>
+                <div class="circle" id="nine"></div>
+                <div class="circle" id="ten"></div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="logos">
+                <div class="cricket" style="zoom: 20%;">
+                    <style>
+                        .bat {
+                            margin: 100px auto;
+                            width: 60px;
+                            height: 300px;
+                            border: 2px solid black;
+                            transform: rotate(40deg);
+                            background: var(--bat-color);
+                            border-bottom-left-radius: 30%;
+                            border-bottom-right-radius: 30%;
+                            border-top-left-radius: 10%;
+                            border-top-right-radius: 10%;
+                            background: #F1C27D;
+                        }
+            
+                        .bat-handle {
+                            width: 20px;
+                            height: 150px;
+                            background: var(--ball-color);
+                            transform: rotate(5deg);
+                            position: relative;
+                            top: -150px;
+                            left: 30px; /* Adjusted the left value */
+                            border-top-left-radius: 20%;
+                            border-top-right-radius: 20%;
+                            border: 0px;
+                            background: #800000;
+                        }
+            
+                        .ball {
+                            background: #800000;;
+                            margin: 100px auto;
+                            width: 50px;
+                            height: 50px;
+                            position: relative;
+                            top: -470px;
+                            left: 40px;
+                            border-radius: 50%;
+                        }
+                    </style>
+                    <div class='bat'>
+                        <div class='bat-handle'></div>
+                        <!-- Added bat-handle inside the bat -->
+                    </div>
+                    <div class='ball'></div>
+                </div>
+                <div class="running" style = "transform: translateX(80px)">
+                    <style>
+                        .running {
+                        --color: black;
+                        --duration: .7s;
+                        zoom: 145%;
+                        .outer {
+                            animation: outer var(--duration) linear infinite;
+                            .body {
+                                background: var(--color);
+                                height: 15px;
+                                width: 8px;
+                                border-radius: 4px;
+                                transform-origin: 4px 11px;
+                                position: relative;
+                                transform: rotate(32deg);
+                                animation: body var(--duration) linear infinite;
+                                &:before {
+                                    content: '';
+                                    width: 8px;
+                                    height: 8px;
+                                    border-radius: 4px;
+                                    bottom: 16px;
+                                    left: 0;
+                                    position: absolute;
+                                    background: var(--color);
+                                }
+                                .arm,
+                                .arm:before,
+                                .leg,
+                                .leg:before {
+                                    content: '';
+                                    width: var(--w, 11px);
+                                    height: 4px;
+                                    top: var(--t, 0);
+                                    left: var(--l, 2px);
+                                    border-radius: 2px;
+                                    transform-origin: 2px 2px;
+                                    position: absolute;
+                                    background: var(--c, var(--color));
+                                    transform: rotate(var(--r, 0deg));
+                                    animation: var(--name, arm-leg) var(--duration) linear infinite;
+                                }
+                                .arm {
+                                    &:before {
+                                        --l: 7px;
+                                        --name: arm-b;
+                                    }
+                                    &.front {
+                                        --r: 24deg;
+                                        --r-to: 164deg;
+                                        &:before {
+                                            --r: -48deg;
+                                            --r-to: -36deg;
+                                        }
+                                    }
+                                    &.behind {
+                                        --r: 164deg;
+                                        --r-to: 24deg;
+                                        &:before {
+                                            --r: -36deg;
+                                            --r-to: -48deg;
+                                        }
+                                    }
+                                }
+                                .leg {
+                                    --w: 12px;
+                                    --t: 11px;
+                                    &:before {
+                                        --t: 0;
+                                        --l: 8px;
+                                    }
+                                    &.front {
+                                        --r: 10deg;
+                                        --r-to: 108deg;
+                                        &:before {
+                                            --r: 18deg;
+                                            --r-to: 76deg;
+                                        }
+                                    }
+                                    &.behind {
+                                        --r: 108deg;
+                                        --r-to: 10deg;
+                                        --c: none;
+                                        &:before {
+                                            --c: var(--color);
+                                            --r: 76deg;
+                                            --r-to: 18deg;
+                                        }
+                                        &:after {
+                                            content: '';
+                                            top: 0;
+                                            right: 0;
+                                            height: 4px;
+                                            width: 6px;
+                                            clip-path: polygon(2px 0, 6px 0, 6px 4px, 0 4px);
+                                            border-radius: 0 2px 2px 0;
+                                            position: absolute;
+                                            background: var(--color);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+            
+                    @keyframes outer {
+                        50% {
+                            transform: translateY(0);
+                        }
+                        25%,
+                        75% {
+                            transform: translateY(4px);
+                        }
+                    }
+            
+                    @keyframes body {
+                        50% {
+                            transform: rotate(16deg);
+                        }
+                        25%,
+                        75% {
+                            transform: rotate(24deg);
+                        }
+                    }
+            
+                    @keyframes arm-leg {
+                        50% {
+                            transform: rotate(var(--r-to));
+                        }
+                    }
+            
+                    @keyframes arm-b {
+                        30%,
+                        70% {
+                            transform: rotate(var(--r-to));
+                        }
+                    }
+            
+                    .buttons {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 40px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        button {
+                            border: 0;
+                            background: 0;
+                            padding: 8px 16px;
+                            margin: 0;
+                            font-weight: 500;
+                            font-size: 16px;
+                            cursor: pointer;
+                            outline: none;
+                            -webkit-appearance: none;
+                            color: var(--c, #8A91B4);
+                            transition: color .3s, transform .3s;
+                            transform: scale(var(--s, 1));
+                            &:hover {
+                                --c: #D1D6EE;
+                            }
+                            &:active {
+                                --s: .9;
+                            }
+                        }
+                    }
+            
+                        .dribbble {
+                            position: fixed;
+                            display: block;
+                            right: 20px;
+                            bottom: 20px;
+                            img {
+                                display: block;
+                                height: 28px;
+                            }
+                        }
+                        .twitter {
+                            position: fixed;
+                            display: block;
+                            right: 64px;
+                            bottom: 14px;
+                            svg {
+                                width: 32px;
+                                height: 32px;
+                                fill: #1da1f2;
+                            }
+                        }
+                    </style>
+                    <div class="running">
+                        <div class="outer">
+                            <div class="body">
+                                <div class="arm behind"></div>
+                                <div class="arm front"></div>
+                                <div class="leg behind"></div>
+                                <div class="leg front"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>       
+                <div class="basketball-container" style="zoom: 30%;">
+                    <style>
+                         .basket-ball {
+                         position: absolute;
+                         overflow: hidden;
+                         height: 20em;
+                         width: 20em;
+                         top: 30%;
+                         left: 30%;
+                         border-radius: 50%;
+                         background-color: #e65c00;
+                         background: -webkit-radial-gradient(center ellipse, #e65c00 0%, #803300 100%);
+                         background: radial-gradient(ellipse at center, #e65c00 0%, #803300 100%);
+                         box-sizing: border-box;
+                         -webkit-transform: translate(-50%, -50%) rotate(30deg);
+                                 transform: translate(-50%, -50%) rotate(30deg);
+                         box-shadow: 10px 20px 25px 10px rgba(0, 0, 0, 0.2);
+                         animation-name: example;
+                         animation-duration: 1s;
+                         }
+                         .basket-ball:before, .basket-ball:after {
+                         content: '';
+                         position: absolute;
+                         display: block;
+                         height: 100%;
+                         width: 100%;
+                         border: solid 0.6em #0d0d0d;
+                         border-radius: 50%;
+                         box-sizing: border-box;
+                         }
+                         .line1{
+                         content: '';
+                         position: absolute;
+                         display: block;
+                         height: 100%;
+                         width: 100%;
+                         border-right: solid 0.6em #0d0d0d;
+                         box-sizing: border-box;
+                         right:50%;
+                         }
+             
+                         .line2{
+                         content: '';
+                         position: absolute;
+                         display: block;
+                         height: 100%;
+                         width: 100%;
+                         border-top: solid 0.6em #0d0d0d;
+                         box-sizing: border-box;
+                         top:50%;
+                         }
+             
+                         .basket-ball:before {
+                         right: 70%;
+                         }
+                         .basket-ball:after {
+                         left: 70%;
+                         }
+                    </style>
+                     <div class="basket-ball"><div class="line2"></div><div class="line1"></div></div>
+                 </div>
+                <div class="tennis_ground" style = "zoom: 20%">
+                    <style>
+                
+                        .tennis_ground {
+                        background: darkgreen;
+                        height: 525px;
+                        width: 700px;
+                        margin: 200px 0 0 200px;
+                        box-shadow: -15px 20px 3em black, 
+                                    -5px 10px 1em darkgray;
+                        border-radius: 20px;
+                        transform: rotateX(60deg) rotateZ(-40deg);
+                        transform-style: preserve-3d;  
+                        border-left: 10px solid silver;
+                        border-bottom: 10px solid silver;
+                        zoom: 40%;
+                        }
+                
+                        .court {
+                        height: 445px;
+                        width: 620px;
+                        background: green;
+                        margin: 40px;
+                        }
+                
+                        .grass {
+                        background: linear-gradient(
+                            120deg,
+                            rgba(255, 255, 255, 0.1) 55%,
+                            rgba(0, 0, 0, 0)
+                            ),
+                            rgba(1, 1, 1, 0.3);
+                        }
+                
+                        .sidelineA {
+                        height: 50px;
+                        width: 610px;
+                        border: 5px solid white;
+                        }
+                
+                        .main_ground {
+                        height: 325px;
+                        width: 610px;
+                        border-left: 5px solid white;
+                        border-right: 5px solid white;
+                        display: flex;
+                        }
+                
+                        .back {
+                        height: 325px;
+                        width: 150px;
+                        border-right: 5px solid white;
+                        }
+                
+                        .front {
+                        height: 325px;
+                        width: 300px;
+                        border-right: 5px solid white;
+                        }
+                
+                        .half {
+                        height: 162px;
+                        width: 300px;
+                        border-bottom: 5px solid white;
+                        }
+                
+                        .sidelineB {
+                        height: 50px;
+                        width: 610px;
+                        border: 5px solid white;
+                        float: right;
+                        }
+                    </style>
+                    <div class="court grass">
+                      <div class="sidelineA"></div>
+                      <div class="main_ground">
+                        <div class="back"></div>
+                        <div class="front">
+                          <div class="half"></div>
+                        </div>
+                      </div>
+                      <div class="sidelineB"></div>
+                    </div>
+                </div>
+        </div>
+
+        <div class="indianflag-container" style="zoom: 80%; border-radius: 1rem; margin-top: 50px">
+            <style>
+            .india-container {
+              display: flex;
+              justify-content: center;
+              margin-top: 5px;
+            }
+            .stripe {
+              width: 225px;
+              height: 50px;
+            }
+            #saffron {
+              background: #FF9933;
+            }
+            #white {
+              background: #FFFFFF;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+            #green {
+              background: #138808;
+            }
+            
+            #circle {
+                background: #f00;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                    display: block;
+                    margin-left: auto;
+                margin-right: auto;
+                    margin-top:50px;
+                    margin-bottom:50px;
+            }
+            #circle-india {
+                background: purple;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                    display: block;
+                    margin-left: auto;
+                margin-right: auto;
+                    margin-top:50px;
+                    margin-bottom:50px;
+            }
+            .all-flags{
+                display: grid;
+                gap: 1rem;
+            }
+            .japan-flag {
+                display: flex;
+                align-items: center;
+                border:1px solid black;
+                box-shadow: 10px 10px 5px grey;
+                width: 225px;
+                height: 150px;
+                margin-left:auto;
+                margin-right:auto;
+                background-color:white;
+            }
+            
+                   </style>
+            
+                   <div class="all-flags" style="display: grid;">
+            
+            
+                    <div class=" india-container" style="border-radius: 1rem;">
+                        <div id="flag">
+                        <div class="stripe" id="saffron"></div>
+                        <div class="stripe" id="white">
+                        <canvas id="circle-india" width="400" height="200" >
+            
+                             </div>
+            
+                        <div class="stripe" id="green"></div>
+                    </div>
+                    </div>
+                <div class="japan-flag">
+                <canvas id="circle" width="400" height="200" style="border:1px solid #000000;">
+                </canvas>
+            
+            </div>
+            <div class="thai-flag"></div>
+            </div>
+                </div>
+    </div>
+</body>
+</html>
