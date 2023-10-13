@@ -1,0 +1,38 @@
+.container {
+    width: 500px;
+    height: 473px;
+    position: relative;
+}
+
+img {
+    position: relative;
+    height: 85px;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.yellow {
+    background-color: #D5B200;
+}
+
+.blue {
+    background-color: #4E3A93;
+}
+
+.green {
+    background-color: #079A3F;
+}
+
+
+
+/* blue */
+
+.first {
+    height: 290px;
+    width: 135px;
+    top: 100px;
+    left: 115px;
+
+    clip-path: circle(50% at 100% 50%);
+}

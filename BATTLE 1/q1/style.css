@@ -2,15 +2,60 @@
     width: 577px;
     height: 442px;
     overflow: hidden;
+    position: relative;
+}
+
+.yellow {
+    background-color: #F7EC7D;
+}
+
+.purple {
     background-color: #62306D;
 }
 
-#yellow {
-    background-color: #F7EC7D;
-    border-radius: 50%;
-}
+
+/* circles */
 
 .container .circle {
     width: 90px;
     height: 90px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.container .circle.yellow {
+    top: 95px;
+    left: 90px;
+}
+
+.container .circle.purple {
+    top: 95px;
+    left: 420px;
+}
+
+
+
+/* right top */
+
+.container .top {
+    width: calc(100% - 270px);
+    height: 250px;
+    position: absolute;
+    top: 0px;
+    left: 270px;
+    --radius: 500px;
+    clip-path: circle(var(--radius) at var(--radius) 100%);
+}
+
+
+/* right bottom */
+
+.container .bottom {
+    width: calc(100% - 330px);
+    height: calc(100% - 250px);
+    position: absolute;
+    top: 250px;
+    left: 330px;
+    --radius: 400px;
+    clip-path: circle(var(--radius) at var(--radius) 0%);
 }
