@@ -3,10 +3,34 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+.trapezoid {
+	border-bottom: 20px solid #b5b5b5;
+	border-left: 25px solid transparent;
+	border-right: 0px solid transparent;
+	height: 0;
+	width: 100px;
+    margin-bottom: 3px;
+}
+.t2{
+    border-bottom: 20px solid rgb(250, 208, 71);
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 75px;
+    margin-bottom: 3px;
+}
+.sq2{
+    height: 140px;
+    margin-bottom: 20px;
+  width: 125px;
+  background-color: #c6c6c6;
+  display: flex;
+  align-items: center;
+}
 .square {
   height: 100px;
-  width: 150px;
-  background-color: #777777;
+  width: 125px;
+  background-color: #c6c6c6;
   display: flex;
   align-items: center;
 }
@@ -15,13 +39,52 @@ h2{
     align-self: center;
     margin-left: auto;
     margin-right: auto;
-
+    font-size: 50px;
+}
+.cont{
+    max-width: fit-content;
+    margin: auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.t3{
+    border-bottom: 20px solid hwb(12 17% 35%);
+	border-left: 0 solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 100px;
+    margin-bottom: 3px;
+}
+.sq3{
+    height: 75px;
+  width: 125px;
+  background-color: #c6c6c6;
+  display: flex;
+  align-items: center;
+}
+.box3{
+    margin-top: 20px;
 }
 </style>
 </head>
 <body>
-
+<div class="cont">
+    <div class="box1">
+<div class="trapezoid "></div>
 <div class="square"><h2>2</h2></div>
+</div>
+<div2 class="box2">
+    <div class="t2"></div>
+    <div class="sq2"><h2>1</h2></div>
+</div2>
+<div2 class="box3">
+    <div class="t3"></div>
+    <div class="sq3"><h2>3</h2></div>
+</div2>
+</div>
+
 
 </body>
-</html> 
+</html>
