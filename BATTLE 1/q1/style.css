@@ -1,0 +1,16 @@
+.container {
+    width: 577px;
+    height: 442px;
+    overflow: hidden;
+    background-color: #62306D;
+}
+
+#yellow {
+    background-color: #F7EC7D;
+    border-radius: 50%;
+}
+
+.container .circle {
+    width: 90px;
+    height: 90px;
+}
